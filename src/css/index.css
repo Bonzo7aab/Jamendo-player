@@ -1,0 +1,286 @@
+body {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#e7f9f8), color-stop(#ebfbfa), color-stop(#eefcfc), color-stop(#f2fefd), to(#f6ffff));
+  background-image: linear-gradient(to right top, #e7f9f8, #ebfbfa, #eefcfc, #f2fefd, #f6ffff);
+}
+
+.mainContainer {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#cdeeec), color-stop(#d0f0ee), color-stop(#d3f1f0), color-stop(#d6f3f1), to(#d9f4f3));
+  background-image: linear-gradient(to right top, #cdeeec, #d0f0ee, #d3f1f0, #d6f3f1, #d9f4f3);
+  -webkit-box-shadow: 0 0 15px #d6f3f1;
+          box-shadow: 0 0 15px #d6f3f1;
+  margin-top: 20px;
+  padding: 0px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.mainContainer .search {
+  border: 1px solid yellow;
+}
+
+.mainContainer .search div form {
+  position: relative;
+}
+
+.mainContainer .search div form .searchInput {
+  width: 100% !important;
+}
+
+.mainContainer .search div form .searchIcon {
+  position: absolute;
+  right: 5%;
+  border-left: 1px solid green;
+  padding: 6px;
+}
+
+.mainContainer .trackContainer {
+  border: 1px solid transparent;
+  padding: 5px;
+}
+
+.mainContainer .selectedSong {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 3px solid #98dcd8;
+}
+
+.mainContainer .selectedSong .selectedImage {
+  padding: 0px;
+}
+
+.mainContainer .selectedSong .selectedImage img {
+  width: 180px;
+  height: 170px;
+  -webkit-box-shadow: 0 0 15px #72d0c9;
+          box-shadow: 0 0 15px #72d0c9;
+  border-radius: 10px;
+}
+
+.mainContainer .selectedSong .songDetails {
+  padding-left: 15px;
+  position: relative;
+  color: #246b66;
+}
+
+.mainContainer .selectedSong .songDetails p {
+  margin-bottom: 0px;
+  font-family: Verdana;
+}
+
+.mainContainer .selectedSong .songDetails .songName {
+  font-family: Verdana;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.mainContainer .selectedSong .songDetails .artistName {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.mainContainer .selectedSong .songDetails .albumName {
+  font-size: 0.8em;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer {
+  position: absolute;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .volumeMute {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .volumeMute:hover {
+  border-radius: 50%;
+  color: #cdeeec;
+  background-color: #246b66;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .volumeMute i {
+  position: absolute;
+  top: 23%;
+  left: 20%;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .volumeBar {
+  float: left;
+  background-color: #bee9e6;
+  border: 1px solid #abe3df;
+  -webkit-box-shadow: 0 0 15px #5fc9c2;
+          box-shadow: 0 0 15px #5fc9c2;
+  width: 100px;
+  height: 10px;
+  border-radius: 20px;
+  margin: 0px 10px;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .volumeBar .volume {
+  position: relative;
+  background-color: #3eb7af;
+  height: 10px;
+  width: 30%;
+  border-radius: 20px;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .volumeBar .volume .volumeDot {
+  position: absolute;
+  right: -4px;
+  height: 10px;
+  width: 10px;
+  background-color: #246b66;
+  border-radius: 50%;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .volumePercentage {
+  float: left;
+  font-size: 0.9em;
+  margin-bottom: 2px;
+}
+
+.mainContainer .selectedSong .songButtons {
+  font-size: 1.3em;
+  text-align: center;
+  padding: 20px;
+  color: #246b66;
+}
+
+.mainContainer .selectedSong .songButtons .fa-step-backward {
+  float: left;
+  margin-top: 8px;
+}
+
+.mainContainer .selectedSong .songButtons .fa-play {
+  font-size: 1.6em;
+}
+
+.mainContainer .selectedSong .songButtons .fa-pause {
+  font-size: 1.6em;
+}
+
+.mainContainer .selectedSong .songButtons .fa-step-forward {
+  float: right;
+  margin-top: 8px;
+}
+
+.mainContainer .selectedSong .songTime {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #246b66;
+}
+
+.mainContainer .selectedSong .songTime span {
+  font-size: 0.9em;
+  margin-bottom: 3px;
+}
+
+.mainContainer .selectedSong .songTime .timeBar {
+  float: left;
+  background-color: #a4e0dc;
+  -webkit-box-shadow: 0 0 15px #5fc9c2;
+          box-shadow: 0 0 15px #5fc9c2;
+  width: 200px;
+  height: 3px;
+  border-radius: 20px;
+  margin: 0px 10px;
+}
+
+.mainContainer .selectedSong .songTime .timeBar .time {
+  position: relative;
+  background-color: #3eb7af;
+  height: 3px;
+  width: 0%;
+  border-radius: 20px;
+}
+
+.mainContainer .selectedSong .songTime .timeBar .time .timeDot {
+  position: absolute;
+  top: -3px;
+  right: -4px;
+  height: 9px;
+  width: 9px;
+  background-color: #246b66;
+  border-radius: 50%;
+}
+
+.mainContainer .otherSongs {
+  margin-top: 15px;
+  opacity: 0.8;
+  border-top: 3px solid #98dcd8;
+}
+
+.mainContainer .otherSongs .otherSong {
+  margin: 5px 0;
+}
+
+.mainContainer .otherSongs .otherSong:hover {
+  background-color: #e7f9f8;
+  cursor: pointer;
+}
+
+.mainContainer .otherSongs .otherSong_info {
+  position: relative;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.mainContainer .otherSongs p {
+  margin: 0 10px;
+  font-size: 0.8em;
+}
+
+.mainContainer .otherSongs .songName {
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+.mainContainer .otherSongs .artistName {
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.mainContainer .otherSongs .albumName {
+  font-size: 0.7em;
+}
+
+.mainContainer .otherSongs .currentSong {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #174542;
+  -webkit-box-shadow: 0 0 10px #5fc9c2;
+          box-shadow: 0 0 10px #5fc9c2;
+  background-color: #5fc9c2;
+}
+
+.mainContainer .otherSongs .otherSongs_image {
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=index.css.map */

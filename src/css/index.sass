@@ -1,0 +1,216 @@
+// WATCH SASS!!!!!!!
+
+//VARIABLES
+$elements-color: #246b66
+$main-color: #cdeeec
+
+body
+  background-image: linear-gradient(to right top, #e7f9f8, #ebfbfa, #eefcfc, #f2fefd, #f6ffff)
+.mainContainer
+  background-image: linear-gradient(to right top, #cdeeec, #d0f0ee, #d3f1f0, #d6f3f1, #d9f4f3)
+  box-shadow: 0 0 15px #d6f3f1
+  margin-top: 20px
+  padding: 0px
+  max-width: 600px
+  padding: 20px
+
+  .search
+
+    div form
+      position: relative
+
+      .searchInput
+        width: 100%
+
+      .searchIcon
+        position: absolute
+        right: 5%
+        padding: 6px
+        
+  .trackContainer
+    border: 1px solid transparent
+    padding: 5px
+
+  .selectedSong
+    margin-top: 15px
+    padding-top: 15px
+    border-top: 3px solid lighten($elements-color, 45%)
+
+    .selectedImage
+      padding: 0px
+      img
+        width: 180px
+        height: 170px
+        box-shadow: 0 0 15px lighten($elements-color, 35%)
+        border-radius: 10px
+
+    .songDetails
+      padding-left: 15px
+      position: relative
+      color: $elements-color
+
+      p
+        margin-bottom: 0px 
+        font-family: Verdana
+
+      .songName
+        font-family: Verdana
+        font-size: 1.2em
+        font-weight: bold
+        margin: 10px 0
+      .artistName
+        text-transform: uppercase
+        font-size: 0.8em
+      .albumName
+        font-size: 0.8em
+
+      .volumeContainer
+        position: absolute
+        bottom: 0px
+        display: flex
+        align-items: center
+
+        .volumeMute
+          position: relative
+          float: left
+          width: 30px
+          height: 30px
+          margin-top: 2px
+          border-radius: 50%
+          transition: all 0.2s
+          &:hover
+            border-radius: 50%
+            color: $main-color
+            background-color: $elements-color
+          i
+            position: absolute
+            top: 23%
+            left: 20%
+        
+        .volumeBar
+          float: left
+          background-color: lighten($elements-color, 55%)
+          border: 1px solid lighten($elements-color, 50%)
+          box-shadow: 0 0 15px lighten($elements-color, 30%)
+          width: 100px
+          height: 10px
+          border-radius: 20px
+          margin: 0px 10px
+          
+          .volume
+            position: relative
+            background-color: lighten($elements-color, 20%)
+            height: 10px
+            width: 30%
+            border-radius: 20px
+
+            .volumeDot
+              position: absolute
+              right: -4px
+              height: 10px
+              width: 10px
+              background-color: $elements-color
+              border-radius: 50%
+
+        .volumePercentage
+          float: left
+          font-size: 0.9em
+          margin-bottom: 2px
+
+    .songButtons
+      font-size: 1.3em
+      text-align: center
+      padding: 20px
+      color: $elements-color
+
+      .fa-step-backward
+        float: left
+        margin-top: 8px
+      .fa-play
+        font-size: 1.6em
+      .fa-pause
+        font-size: 1.6em
+      .fa-step-forward
+        float: right
+        margin-top: 8px
+
+    .songTime
+      text-align: center
+      display: flex
+      justify-content: center
+      align-items: center
+      color: $elements-color
+
+      span
+        font-size: 0.9em
+        margin-bottom: 3px
+
+      .timeBar
+        float: left
+        background-color: lighten($elements-color, 48%)
+        box-shadow: 0 0 15px lighten($elements-color, 30%)
+        width: 200px
+        height: 3px
+        border-radius: 20px
+        margin: 0px 10px
+        
+        .time
+          position: relative
+          background-color: lighten($elements-color, 20%)
+          height: 3px
+          width: 0%
+          border-radius: 20px
+
+          .timeDot
+            position: absolute
+            top: -3px
+            right: -4px
+            height: 9px
+            width: 9px
+            background-color: $elements-color
+            border-radius: 50%
+    
+  .otherSongs
+    margin-top: 15px
+    opacity: 0.8
+    border-top: 3px solid lighten($elements-color, 45%)
+
+    .otherSong
+      margin: 5px 0
+      &:hover
+        background-color: #e7f9f8
+        cursor: pointer
+
+    .otherSong_info
+      position: relative
+      padding: 0
+      margin-top: 20px
+    p
+      margin: 0 10px
+      font-size: 0.8em
+
+    .songName
+      font-family: Verdana
+      font-weight: bold
+    .artistName
+      text-transform: uppercase
+      font-size: 0.7em
+    .albumName
+      font-size: 0.7em
+
+    .currentSong
+      position: absolute
+      top: 15%
+      right: 10%
+      padding: 5px 10px
+      border-radius: 10px
+      color: darken($elements-color, 10%)
+      box-shadow: 0 0 10px lighten($elements-color, 30%)
+      background-color: lighten($elements-color, 30%)
+
+
+    .otherSongs_image
+      padding: 0
+      width: 100px
+      height: 100px
+      border-radius: 50%
