@@ -21,20 +21,6 @@ class App extends React.Component {
     componentDidMount () {
       this.initialFetch()
     }
-    // initialFetch() {
-    //   axios.get(`https://api.jamendo.com/v3.0/albums/tracks/?client_id=${this.state.clientID}&artist_name=Jaime+Heras`)
-    //     .then(res => {
-    //     this.setState({ 
-    //       album: res.data.results[5],
-    //       selectedSong: res.data.results[5].tracks[0],
-    //       isLoading: false
-    //     })
-    //     console.log(res.data.results)
-    //     //console.log('album: ', this.state.album)
-    //     this.setDefaults(this.state.album)
-    //   })
-    // }
-
 
     initialFetch() {
       axios.get(`https://api.jamendo.com/v3.0/tracks/?client_id=${this.state.clientID}&format=jsonpretty&limit=10&include=musicinfo&groupby=artist_id&search=jaime`)
@@ -52,9 +38,7 @@ class App extends React.Component {
       audioPlayer.volume = 0.1
     }
     selectedTrack = (track) => {
-      console.log(track)
       this.setState({ 
-        //selectedSong: this.state.album.tracks[track.position - 1],
         selectedSong: track,
         musicPlaying: false,
         musicMuted: false 
@@ -94,7 +78,6 @@ class App extends React.Component {
         this.nextSong()
       }
     }
-    //BUG clicking 2 times on dot reset time to almost 0
     timeChange = (e) => {
       let audioPlayer = document.querySelector('#audioPlayer')
       let percentage = ((e.pageX - e.target.getBoundingClientRect().left) / 100).toFixed(2) / 2
