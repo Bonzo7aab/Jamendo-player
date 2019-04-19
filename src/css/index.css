@@ -14,23 +14,17 @@ body {
   padding: 20px;
 }
 
-.mainContainer .search {
-  border: 1px solid yellow;
-}
-
 .mainContainer .search div form {
   position: relative;
 }
 
 .mainContainer .search div form .searchInput {
-  width: 100% !important;
+  width: 100%;
 }
 
 .mainContainer .search div form .searchIcon {
   position: absolute;
-  right: 5%;
-  border-left: 1px solid green;
-  padding: 6px;
+  right: 6%;
 }
 
 .mainContainer .trackContainer {
@@ -144,12 +138,18 @@ body {
   width: 10px;
   background-color: #246b66;
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px grey;
+          box-shadow: 0 0 5px grey;
 }
 
 .mainContainer .selectedSong .songDetails .volumeContainer .volumePercentage {
   float: left;
   font-size: 0.9em;
   margin-bottom: 2px;
+}
+
+.mainContainer .selectedSong .songDetails .volumeContainer .fa-sync-alt {
+  margin-left: 10px;
 }
 
 .mainContainer .selectedSong .songButtons {
@@ -178,7 +178,6 @@ body {
 }
 
 .mainContainer .selectedSong .songTime {
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,6 +222,8 @@ body {
   width: 9px;
   background-color: #246b66;
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px grey;
+          box-shadow: 0 0 5px grey;
 }
 
 .mainContainer .otherSongs {

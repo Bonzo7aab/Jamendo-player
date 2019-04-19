@@ -145,11 +145,7 @@ class App extends React.Component {
 
 
     render() {
-      //const {image: album_image, tracks, artist_name, name: album_name} = this.state.album
       const album = this.state.album
-      let currentSongIndex = this.state.album[this.state.album.indexOf(this.state.selectedSong)]
-      //const {image: album_image, artist_name, name: album_name} = this.state.album
-      //const {audio, duration, name: song_name} = this.state.selectedSong
       const {audio, duration, name: song_name, image: song_image, artist_name: song_artist, album_name: song_album} = this.state.selectedSong
       return (
         <div className='mainContainer container'>
@@ -187,7 +183,7 @@ class App extends React.Component {
                     <div className="volume"><div className="volumeDot"></div></div>
                   </div>
                   <span className="volumePercentage">10%</span>
-                  {/* <span><i class="fas fa-sync-alt"></i></span> */}
+                  <i className="fas fa-sync-alt"></i>
                 </div>
               </div>
               </div>
@@ -214,8 +210,6 @@ class App extends React.Component {
             <div>Loading...</div> 
           )}
           <div className='otherSongs'>
-            {/* {!this.state.isLoading && tracks ? (
-              tracks.map(track => ( */}
             {!this.state.isLoading && album ? (
               album.map(track => (
                 <div key={track.id} className='row trackContainer otherSong'
@@ -225,9 +219,7 @@ class App extends React.Component {
                   </div>
                   <div className='col-sm-9 otherSong_info'>
                     <p className='songName'>{track.name}</p>
-                    {/* <p className='artistName'>{artist_name}</p> */}
                     <p className='artistName'>{track.artist_name}</p>
-                    {/* <p className='albumName'>{album_name}</p> */}
                     <p className='albumName'>{track.album_name}</p>
                     {track.name === song_name ? <span className='currentSong'>Playing</span> : ''}
                   </div>
