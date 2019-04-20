@@ -2,6 +2,7 @@
 
 $elements-color: #246b66
 $main-color: #cdeeec
+$break-small: 575px
 
 body
   background-image: linear-gradient(to right top, #e7f9f8, #ebfbfa, #eefcfc, #f2fefd, #f6ffff)
@@ -36,6 +37,9 @@ body
 
     .selectedImage
       padding: 0px
+      @media screen and (max-width: $break-small) 
+        width: 50%
+
       img
         width: 180px
         height: 170px
@@ -46,6 +50,9 @@ body
       padding-left: 15px
       position: relative
       color: $elements-color
+      @media screen and (max-width: $break-small) 
+        width: 50%
+      
 
       p
         margin-bottom: 0px 
@@ -67,6 +74,8 @@ body
         bottom: 0px
         display: flex
         align-items: center
+        @media screen and (max-width: $break-small) 
+          position: relative
 
         .volumeMute
           position: relative
@@ -118,6 +127,7 @@ body
 
         .fa-sync-alt
           margin-left: 10px
+          opacity: 0.4
 
     .songButtons
       font-size: 1.3em
@@ -209,6 +219,8 @@ body
       color: darken($elements-color, 10%)
       box-shadow: 0 0 10px lighten($elements-color, 30%)
       background-color: lighten($elements-color, 30%)
+      @media screen and (max-width: $break-small) 
+        top: -80px
 
 
     .otherSongs_image

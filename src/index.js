@@ -15,7 +15,8 @@ class App extends React.Component {
       isLoading: true,
       musicPlaying: true,
       musicMuted: false,
-      musicVolume: 0.1
+      musicVolume: 0.1,
+      loopTrack: false
     }
   
     componentDidMount () {
@@ -95,6 +96,17 @@ class App extends React.Component {
       let volumePercentage =  document.querySelector('.volumePercentage')
       volumePercentage.innerHTML = (e.target.volume * 100).toFixed() + "%"
     }
+    loopTrack = (e) => {
+      let audioPlayer = document.querySelector('#audioPlayer')
+      audioPlayer.loop = this.state.loopTrack
+      if ( this.state.loopTrack === false) {
+        e.target.style.opacity = 0.4
+        this.setState({ loopTrack: true })
+      } else {
+        e.target.style.opacity = 1
+        this.setState({ loopTrack: false })
+      }
+    }
     previousSong = (e) => {
       let previousSong = this.state.album[this.state.album.indexOf(this.state.selectedSong) - 1]
       if(previousSong) {
@@ -166,7 +178,7 @@ class App extends React.Component {
                     <div className="volume"><div className="volumeDot"></div></div>
                   </div>
                   <span className="volumePercentage">10%</span>
-                  <i className="fas fa-sync-alt"></i>
+                  <i className="fas fa-sync-alt" onClick={(e) => this.loopTrack(e)}></i>
                 </div>
               </div>
               </div>

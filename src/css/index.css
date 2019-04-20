@@ -42,6 +42,12 @@ body {
   padding: 0px;
 }
 
+@media screen and (max-width: 575px) {
+  .mainContainer .selectedSong .selectedImage {
+    width: 50%;
+  }
+}
+
 .mainContainer .selectedSong .selectedImage img {
   width: 180px;
   height: 170px;
@@ -54,6 +60,12 @@ body {
   padding-left: 15px;
   position: relative;
   color: #246b66;
+}
+
+@media screen and (max-width: 575px) {
+  .mainContainer .selectedSong .songDetails {
+    width: 50%;
+  }
 }
 
 .mainContainer .selectedSong .songDetails p {
@@ -86,6 +98,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 575px) {
+  .mainContainer .selectedSong .songDetails .volumeContainer {
+    position: relative;
+  }
 }
 
 .mainContainer .selectedSong .songDetails .volumeContainer .volumeMute {
@@ -150,6 +168,7 @@ body {
 
 .mainContainer .selectedSong .songDetails .volumeContainer .fa-sync-alt {
   margin-left: 10px;
+  opacity: 0.4;
 }
 
 .mainContainer .selectedSong .songButtons {
@@ -276,6 +295,12 @@ body {
   -webkit-box-shadow: 0 0 10px #5fc9c2;
           box-shadow: 0 0 10px #5fc9c2;
   background-color: #5fc9c2;
+}
+
+@media screen and (max-width: 575px) {
+  .mainContainer .otherSongs .currentSong {
+    top: -80px;
+  }
 }
 
 .mainContainer .otherSongs .otherSongs_image {
